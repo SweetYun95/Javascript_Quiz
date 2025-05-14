@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>quiz</title>
+      <script>
+         // 사용자로부터 원의 반지름을 입력받아 원의 넓이와 둘레를 구하는 프로그램을 만들어 보세요.
+
+         // 숫자를 입력받습니다.
+         const rawInput = prompt('원의 반지름을 입력해주세요.')
+         console.log(rawInput)
+         //숫자 형태로 변환합니다.
+         let r = Number(rawInput)
+         console.log(r)
+         //원의 넓이와 둘레를 구해 출력하세요.
+         // [넓이 = 3.14 * 반지름 * 반지름]
+         let circleArea = 3.14 * r * r
+         // [둘레 = 2 * 3.14 * 반지름]
+         let circleCircum = 2 * 3.14 * r
+         confirm(`원의 넓이는 ${circleArea}이고 원의 둘레는 ${circleCircum}입니다.`)
+      </script>
+   </head>
+   <body></body>
+</html>
