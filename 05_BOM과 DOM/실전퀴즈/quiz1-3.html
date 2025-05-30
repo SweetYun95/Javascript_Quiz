@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <!-- 1-3.  자바스크립트를 이용해 <p>안녕하세요</p> 문서 객체를 생성하고 폰트 컬러는 red, 폰트 굵기는 bold로 줍니다. 그리고 해당 문서 객체를 <div>안에 추가하세요.(cleateElement, appendChild 이용) -->
+      <div id="container"></div>
+
+      <script>
+         //작성
+         const divContainer = document.querySelector('#container')
+
+         // p 객체 생성
+         const pNew1 = document.createElement('p')
+         
+         pNew1.textContent = '안녕하세요'
+         pNew1.style.color = 'red'
+         pNew1.style.fontWeight = 'bold'
+
+         // div 안에 추가
+         divContainer.appendChild(pNew1)
+      </script>
+   </body>
+</html>

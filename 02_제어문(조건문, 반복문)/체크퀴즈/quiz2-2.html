@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 2-2. 태어난 해를 입력받아 띠를 구하는 코드를 switch문으로 작성하세요.
+         const rawInput = prompt('태어난 해를 입력해주세요.', '')
+         const year = Number(rawInput)
+         const e = year % 12
+         let result
+
+         switch (e) {
+            case 0: // 원숭이
+               result = '원숭이'
+               break
+
+            case 1: // 닭
+               result = '닭'
+               break
+
+            case 2: // 개
+               result = '개'
+               break
+
+            case 3: // 돼지
+               result = '돼지'
+               break
+
+            case 4: // 쥐
+               result = '쥐'
+               break
+
+            case 5: // 소
+               result = '소'
+               break
+
+            case 6: // 호랑이
+               result = '호랑이'
+               break
+
+            case 7: // 토끼
+               result = '토끼'
+               break
+
+            case 8: // 용
+               result = '용'
+               break
+
+            case 9: // 뱀
+               result = '뱀'
+               break
+
+            case 10: // 말
+               result = '말'
+               break
+
+            case 11: // 양
+               result = '양'
+               break
+
+            default:
+               result = '잘못된 입력입니다.'
+               break
+         }
+         document.write(`${year}년은 ${result}띠 입니다`)
+      </script>
+   </body>
+</html>

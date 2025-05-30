@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 3-1. 사용자로부터 3개의 숫자를 입력 받아 그 수들의 최댓값, 최솟값, 합계, 평균을 각각 구한 후 브라우저 혹은 콘솔에 출력하세요.
+         const num1 = Number(prompt('1번째 숫자를 입력하세요', 0))
+         const num2 = Number(prompt('2번째 숫자를 입력하세요', 0))
+         const num3 = Number(prompt('3번째 숫자를 입력하세요', 0))
+         console.log(`${num1},${num2},${num3}`) // 입력받은 정수들 보여주기
+
+         //최댓값 구하기
+         if (num1 > num2 && num1 > num3) {
+            console.log(`세 수들 중 최댓값은 1번째 숫자인 ${num1}입니다.`)
+         } else if (num2 > num1 && num2 > num3) {
+            console.log(`세 수들 중 최댓값은 2번째 숫자인 ${num2}입니다.`)
+         } else if (num3 > num1 && num3 > num2) {
+            console.log(`세 수들 중 최댓값은 3번째 숫자인 ${num3}입니다.`)
+         }
+
+         //최솟값 구하기
+         if (num1 < num2 && num1 < num3) {
+            console.log(`세 수들 중 최솟값은 1번째 숫자인 ${num1}입니다.`)
+         } else if (num2 < num1 && num2 < num3) {
+            console.log(`세 수들 중 최솟값은 2번째 숫자인 ${num2}입니다.`)
+         } else if (num3 < num1 && num3 < num2) {
+            console.log(`세 수들 중 최솟값은 3번째 숫자인 ${num3}입니다.`)
+         }
+
+         // 세수의 합 구하기
+         const addmit = num1 + num2 + num3
+         console.log(`세 수의 합은 ${addmit}`)
+
+         //  세수의 평군
+         console.log(`세 수의 평균은 ${addmit / 3}`)
+      </script>
+   </body>
+</html>

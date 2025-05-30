@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 2-1. 동기와 비동기가 무엇인지 주석으로 작성하고 아래 주어진 코드가 왜 비동기인지 작성하세요.
+         // 동기는 코드가 들어온 순서대로 순차적으로 실행되는걸 말한다.
+         // 비동기는 코드가 들어온 순서대로 처리되지 않는다.
+
+         // 아래 코드는 setTimeout으로 비동기 함수를 만들었다.
+         // 안녕하세요
+         // 하니입니다.
+         // (1초후)
+         // 저는
+
+         console.log('안녕하세요') // 1번째 실행
+
+         setTimeout(() => {
+            // setTimeout으로 3번째 실행
+            console.log('저는')
+         }, 1000)
+
+         console.log('하니입니다.') // 2번째 실행
+      </script>
+   </body>
+</html>

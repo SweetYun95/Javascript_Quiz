@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <!-- 2-5. 사용자가 선택 상자에서 값을 선택하면, 선택된 value 속성의 값이 화면에 표시되도록 하는 코드를 작성하세요.  -->
+   <body>
+      <label for="fruits">과일을 선택하세요:</label>
+      <select id="fruits">
+         <option value="apple">사과</option>
+         <option value="banana">바나나</option>
+         <option value="orange">오렌지</option>
+      </select>
+
+      <div id="result">선택된 과일: apple</div>
+
+      <script>
+         const selectId = document.querySelector('#fruits')
+         const divId = document.querySelector('#result')
+
+         selectId.addEventListener('change', (e) => {
+            const options = e.currentTarget.options
+            console.log(options)
+
+            const index = e.currentTarget.options.selectedIndex
+            console.log(index)
+
+              divId.textContent = `선택된 과일: ${options[index].textContent}`
+         })
+      </script>
+   </body>
+</html>

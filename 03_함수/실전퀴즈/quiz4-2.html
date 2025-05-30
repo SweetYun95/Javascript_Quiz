@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 4-2. 다음과 같은 역할 배열과 이메일 배열이 있습니다.
+         //  filter()와 map()을 사용하여 admin 역할을 가진 사용자의 이메일을 추출하세요.
+         //          **출력결과**
+         // ['bob@example.com', 'david@example.com']
+
+         const roles = ['user', 'admin', 'user', 'admin']
+         const emails = ['alice@example.com', 'bob@example.com', 'charlie@example.com', 'david@example.com']
+
+         // roles에서 admin의 인덱스를 가져온다
+         // 그 인덱스를 이용해서 emails에서 admind의 이메일을 추출
+         const adminEmails = roles.map((role, index) => (role === 'admin' ? emails[index] : null)).filter((email) => email !== null)
+
+         console.log(adminEmails)
+      </script>
+   </body>
+</html>

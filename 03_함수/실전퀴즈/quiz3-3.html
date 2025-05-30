@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 3-3. 아래 공식을 활용해 적정몸무게를 구하고 체중의 정상여부를 알려주는 함수 2개를 만듭니다.
+         // 적정 몸무게 계산식: (신장-100) * 0.9
+         // 체질량 지수 BMI 계산식: 체중(kg) / ((신장 * 신장) / 10000)
+
+         const height = Number(prompt('키를 입력하세요(cm)', 180))
+         const weight = Number(prompt('몸무게를 입력하세요(kg)', 80))
+         /*--------------------------------------------------------*/
+         //          **[만들어야 할 함수 2개]**
+
+         // - 신장을 매개변수로 받아 **적정 몸무게를 계산해 리턴해주는** 함수
+         function getIdWeight(height) {
+            const avg = (height - 100) * 0.9
+            return avg
+         }
+
+         // - 신장과 몸무게를 받아 체질량 지수 BMI를 계산,
+         //  그 값을 보고 저체중, 정상, 과체중 여부를 리턴해주는 함수
+
+         // bmi 계산 함수
+         // BMI 계산식: 체중(kg) / ((신장 * 신장) / 10000)
+         function bmi(height, weight) {
+            const bmi = weight / ((height * height) / 10000)
+
+            let result = '결과값 없음'
+            // BMI 20미만: 저체중
+            // BMI 20~25: 정상
+            // BMI 25~29: 과체중
+            // BMI 30~39: 비만
+            // BMI 40 이상: 고도비만
+
+            if (bmi >= 40) {
+               result = '고도비만'
+            } else if (bmi >= 30) {
+               result = '고도비만'
+            } else if (bmi >= 25) {
+               result = '과체중'
+            } else if (bmi >= 20) {
+               result = '정상'
+            } else {
+               result = '저체중'
+            }
+
+            return result
+         }
+
+         // 두 함수를 이용해 최종적으로 사용자의 적정몸무게와 정상, 과체중, 비만, 고도비만 여부를 화면에 출력합니다. (비익명 함수, 화살표 함수 중 원하는 것을 사용해 작성하세요)
+         // **[최종 결과]**
+         document.write(`당신의 적정 몸무게는 ${getIdWeight(height)}이고, 당신의 bmi는 ${bmi(height, weight)}입니다.`)
+
+
+
+         /*--------------------------------------------------------*/
+         // 실제 BMI 기준
+         // 저체중 18.5 미만
+         // 정상 체중 18.5 이상 25 미만
+         // 과체중 25 이상 ~ 30 미만
+         // 비만  30 이상 ~ 35 미만
+         // 고도비만 35이상
+      </script>
+   </body>
+</html>

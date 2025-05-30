@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 1-5. originalArray에도 4가 추가된 이유를 주석으로 작성하고 copiedArray에만 4가 추가 될수 있도록 코드를 수정하세요.
+         /*
+
+         const originalArray = [1, 2, 3]
+         const copiedArray = originalArray
+         copiedArray.push(4)
+         console.log(originalArray)
+         console.log(copiedArray)
+         */
+         // 위에서 사용한 복사는 앏은 복사로 같은 주소를 가진다.
+
+         // copiedArray에만 4가 추가 될수 있도록 코드를 수정
+         const originalArray = [1, 2, 3]
+         const copiedArray = [...originalArray]
+         copiedArray.push(4)
+         console.log(originalArray)
+         console.log(copiedArray)
+      </script>
+   </body>
+</html>

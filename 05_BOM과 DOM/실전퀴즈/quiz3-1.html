@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>예제</title>
+   </head>
+   <body>
+      <input type="text" /> cm =
+      <span></span>
+      <select>
+         <option value="10">mm</option>
+         <option value="0.01">m</option>
+         <option value="0.393701">inch</option>
+      </select>
+
+      <script>
+         // 3-1. 다음과 같이 select 박스에서 mm, m, inch 선택시 입력된 cm값을 각각의 단위로 환산한 결과를 바로 구하는 코드를 작성하세요.(아래 공식 참고)
+         // **힌트: select 박스의 value값을 이용**
+         /*
+          입력된 cm값 * 10 = mm 값
+          입력된 cm값 * 0.01 = m 값
+          입력된 cm값 * 0.393701= inch값
+         */
+
+         let currentValue //사용자가 입력한 값을 저장하는 변수
+         let constValue = 10 // select박스에서 선택한 option값의 value를 저장하는 변수 -> select 박스를 선택시 이 변수의 값을 변화시킨다
+
+         const select = document.querySelector('select')
+         const input = document.querySelector('input')
+         const span = document.querySelector('span')
+
+         const calculate = () => {
+            span.textContent = (currentValue * constValue).toFixed(2)
+         }
+
+         select.addEventListener('change', (event) => {
+            const options = event.currentTarget.options
+            const index = event.currentTarget.options.selectedIndex
+            constValue = Number(options[index].value)
+            calculate()
+         })
+
+         input.addEventListener('keyup', (event) => {
+            currentValue = Number(event.currentTarget.value)
+            calculate()
+         })
+      </script>
+   </body>
+</html>

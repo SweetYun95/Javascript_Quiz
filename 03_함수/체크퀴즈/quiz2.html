@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 2. 매개변수 a, b를 받아서 곱한 결과를 출력하는 함수 3개를 각각 만드는데 다음과 같은 함수로 만드세요.
+         // 매개변수가 없는 경우
+         // 리턴값이 없는 경우
+         // 매개변수와 리턴값이 둘다 없는 경우
+
+         function mul1() {
+            // 매개변수 없는 경우
+            var a = 2
+            var b = 3
+            return a * b
+         }
+
+
+         function mul2(a, b) {
+            console.log('mul2에서 곱한 결과:', a * b)
+
+            // 리턴값 없는 경우
+         }
+
+         function mul3() {
+            // 매개변수 리턴값 둘다 없음
+            var a = 2
+            var b = 3
+            console.log('mul3에서 곱한 결과:', a * b)
+         }
+
+         console.log('mul1에서 곱한 결과:', mul1())
+         mul2(2, 3)
+         mul3()
+      </script>
+   </body>
+</html>

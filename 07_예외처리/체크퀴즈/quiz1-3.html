@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 1-3. 예외가 발생하는 라인과 이유를 주석으로 작성하고
+         // try~catch~finally를 이용해 에러 발생시 arr 배열에 1,2,3값을 추가한 후
+         // finally에서 arr의 배열의 값을 모두 출력하세요.
+
+         let arr = []
+         try {
+            console.log(str.length) // 여기서 예외 발생, str이라는 변수가 정의되지 않음
+         } catch (exception) {
+            arr.push(1, 2, 3)
+         } finally {
+            console.log(arr)
+         }
+      </script>
+   </body>
+</html>

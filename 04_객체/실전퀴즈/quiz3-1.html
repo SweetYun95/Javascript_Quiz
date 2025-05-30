@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 3-1. 주어진 JSON 객체에서 사용자의 취미 목록을 출력할 때, 각각의 취미 앞에 순서 번호를 붙여 출력하세요. 예를 들어, 1. 독서, 2. 등산, 3. 영화 감상 형식으로 출력해야 합니다.(forEach 메서드를 사용하여 순서와 함께 취미를 출력합니다.)
+         const data = {
+            user: {
+               name: '김철수',
+               age: 30,
+               email: 'chulsoo@example.com',
+               address: {
+                  city: '서울',
+                  district: '강남구',
+                  street: '테헤란로 123',
+                  postalCode: '06044',
+               },
+               hobbies: ['독서', '등산', '영화 감상'],
+               joinedDate: '2023-08-15',
+            },
+            products: [
+               {
+                  productName: '노트북',
+                  brand: '삼성',
+                  price: 1500000,
+                  inStock: true,
+               },
+               {
+                  productName: '스마트폰',
+                  brand: '애플',
+                  price: 1200000,
+                  inStock: false,
+               },
+            ],
+         }
+
+         data.user.hobbies.forEach((myHobbi, index) => console.log(`${index + 1}. ${myHobbi}`))
+      </script>
+   </body>
+</html>

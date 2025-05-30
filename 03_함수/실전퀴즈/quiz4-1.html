@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 4-1. 다음과 같은 가격 배열이 있습니다.
+         // map()을 사용하여, 가격이 100 이상인 항목은 그대로 유지하고,
+         // 100 미만인 항목은 "할인"으로 변경된 배열을 만들어 보세요.
+         const prices = [150, 50, 70, 200]
+
+         const result = prices.map((price) => (price >= 100 ? price : '할인'))
+         console.log(result)
+      </script>
+   </body>
+</html>

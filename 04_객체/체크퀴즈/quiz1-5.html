@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 1-5. 주어진 JSON 객체를 아래와 같이 문자열로 바꿔 각각 콘솔과 브라우저 화면에 출력하세요. (콘솔은 정렬해서)
+         const webtoonTopRank = {
+            company: '네이버',
+            date: '2024/09',
+            kind: '정식 요일 웹툰',
+            title: ['참교육', '김부장', '화산귀환', '육아일기', '외모지상주의', '개꿈', '입학용병'],
+         }
+
+         const jsonTostr=JSON.stringify(webtoonTopRank, null,2)
+         document.write(jsonTostr)
+         console.log(jsonTostr)
+
+         // document화면에서도 <pre>를 이용하여 정렬을 보이는 방법
+         document.write('<hr/>')
+         document.write(`<pre>${jsonTostr}</pre>`)
+      </script>
+   </body>
+</html>

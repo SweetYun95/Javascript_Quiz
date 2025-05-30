@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 1-1. 예외가 발생하는 라인과 이유를 주석으로 작성하고 try~catch를 이용해 alert으로 ‘str값은 사용할 수 없습니다’ 라고 출력하세요.
+
+         // let str = null
+         // console.log(str.length) // 여기서 예외 발생, null값인데 length로 길이를 구하려고 해서 에러 발생함
+
+         try {
+            let str = null
+            console.log(str.length)
+         } catch (error) {
+            alert('str값은 사용할 수 없습니다')
+         }
+      </script>
+   </body>
+</html>

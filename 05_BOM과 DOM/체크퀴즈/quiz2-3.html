@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <!-- 2-3. 사용자가 마우스를 div 요소에 올려놓으면, 해당 요소의 배경색이 노란색으로 변경되도록 하는 코드를 작성하세요. -->
+
+      <div id="myDiv" style="width: 100px; height: 100px; background-color: lightgray">여기에 마우스를 올려보세요</div>
+
+      <script>
+         const focusDiv = document.querySelector('div')
+
+         focusDiv.addEventListener('mouseover', () => {
+            focusDiv.style.backgroundColor = 'lightyellow'
+         })
+         focusDiv.addEventListener('mouseout', () => {
+            focusDiv.style.backgroundColor = 'lightgray'
+         })
+      </script>
+   </body>
+</html>

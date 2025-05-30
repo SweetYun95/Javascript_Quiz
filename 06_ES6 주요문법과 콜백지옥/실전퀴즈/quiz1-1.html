@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 1-1. 문제에서 주어진 코드를 Promise함수로 개선해 작성하세요.
+         function name() {
+            return new Promise((resolve) => {
+               setTimeout(() => {
+                  console.log('저는')
+                  resolve('하니입니다.')
+               }, 1000)
+            })
+         }
+
+         name().then((result) => console.log(result))
+
+         console.log('안녕하세요')
+      </script>
+   </body>
+</html>

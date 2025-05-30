@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 11. quiz11.html 실행결과가 왜 아래와 같은지 그 이유를 주석으로 작성하세요.
+         var globalVar = '나는 전역변수 입니다.' // 전역변수 정의됨
+
+         function exampleFunction() {
+            var localVar = '나는 지역변수 입니다.' // 지역변수 정의됨
+
+            console.log(globalVar) // 전역에서 정의된것은 지역에서 가져올수 있다.
+            console.log(localVar) // 같은 지역 안에서 정의된 지역변수를 가져옴
+         }
+
+         exampleFunction()
+
+         console.log(globalVar)  // 전역에서 전역변수를 가져올수 있다
+         console.log(localVar) // 전역에서 지역변수를 가져올수 없어서 에러가 발생한다.
+      </script>
+   </body>
+</html>

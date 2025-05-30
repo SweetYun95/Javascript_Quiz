@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 1-4. 주어진 JSON 객체에서 저자를 ‘차인표’ -> ‘정유정’으로 장르에서 ‘드라마’ -> ‘스릴러’로 변경하세요.
+         const novel = {
+            title: '영원한 천국',
+            author: '차인표',
+            kind: '한국 장편소설',
+            genre: ['드라마', '역사'],
+            publishDate: '2024-08-28',
+            numberOfpages: 524,
+         }
+         novel.author='정유정'
+         novel.genre[0]='스릴러'
+         console.log(novel)
+      </script>
+   </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <script>
+         // 2-1. 주어진 학생 정보 배열에서 모든 학생의 이메일의 아이디만 추출해 출력하세요.(foreach 혹은 map 사용)
+         const arr = [
+            {
+               name: '김은아',
+               grade: 'A+',
+               age: 22,
+               email: 'kea@student.com',
+            },
+            {
+               name: '장수민',
+               grade: 'B+',
+               age: 21,
+               email: 'zsm@student.com',
+            },
+            {
+               name: '서우혁',
+               grade: 'A',
+               age: 23,
+               email: 'suh@student.com',
+            },
+            {
+               name: '이수훈',
+               grade: 'F',
+               age: 23,
+               email: 'lsh@student.com',
+            },
+         ]
+
+         arr.forEach((student) => {
+            console.log(student)
+            const idx = student.email.indexOf('@')
+            console.log(idx)
+            const id = student.email.substring(0, idx)
+            console.log(id)
+            document.writeln(id)
+         })
+         document.writeln('<hr>')
+         console.log('-------------------')
+
+         const result = arr.map((student) => {
+            console.log(student)
+            const idx = student.email.indexOf('@')
+            console.log(idx)
+            const id = student.email.substring(0, idx)
+            console.log(id)
+            document.writeln(id)
+         })
+      </script>
+   </head>
+   <body></body>
+</html>

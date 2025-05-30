@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 3-4. 아래 주어진 배열에서 중복을 제거한 결과 배열을 만들어 출력하세요.
+         // **(힌트: indexOf(요소) 함수는 찾는 요소가 없을시 -1을 준다)**
+
+         let arr = [5, 2, 8, 5, 1, 2, 3]
+
+         let singleArr = []
+         
+         for (let i = 0; i < arr.length; i++) {
+            if (singleArr.indexOf(arr[i]) === -1) {
+               singleArr.push(arr[i])
+            }
+         }
+         console.log(singleArr)
+         // 중복을 제거한 결과 [5, 2, 8, 1, 3] 출력
+      </script>
+   </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <!-- 2-2. 사용자가 입력 필드에 글자를 입력할 때마다, 입력된 내용을 <p>태그에 출력하는 코드를 작성하세요. -->
+
+      <input type="text" id="myInput" placeholder="텍스트를 입력하세요" />
+      <p></p>
+      <script>
+         const text = document.querySelector('#myInput')
+         const p = document.querySelector('p')
+
+         text.addEventListener('input', (e) => {
+            p.textContent = `${e.currentTarget.value}`
+         })
+      </script>
+   </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 10. filter함수를 사용해 주어진 배열에서 ‘김’만 추출한 결과를 리턴받아 아래와 같이 출력하세요.
+         // ['김', '김', '김']
+         //      (힌트: filter는 return 부분에 조건식이 오게된다)
+         const names = ['이', '김', '박', '김', '유', '정', '김']
+
+         const name1 = names.filter((name) => {
+            if (name.indexOf('김') === -1) {
+               return false
+            } else {
+               return true
+            }
+         })
+         console.log(name1)
+
+        
+      </script>
+   </body>
+</html>

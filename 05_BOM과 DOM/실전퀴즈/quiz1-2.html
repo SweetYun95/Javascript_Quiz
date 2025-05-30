@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <!-- 1-2.  모든 <a> 태그의 속성 중 두번째 <a> 태그만 target을 **target=_blank** 로 바꾸는 코드를 작성하세요.
+
+**(foreach의 index를 이용)** -->
+      <a href="https://www.naver.com/">링크1</a>
+      <a href="https://www.google.com/">링크2</a>
+
+      <script>
+         //작성
+         const hrefs = document.querySelectorAll('a')
+
+         hrefs.forEach((href, index) => {
+            if (index === 1) {
+               href.setAttribute('target', '_blank')
+            }
+         })
+      </script>
+   </body>
+</html>

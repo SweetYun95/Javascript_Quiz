@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 1-3. async, await를 사용하는 이유를 작성하고 주어진 코드를 async, await를 사용하도록 바꾸세요.
+         // then(), catch() 체이닝을 하면
+         // 비동기 처리 흐름이 복잡해질수록 가독성 떨어지게되어 콜백지옥처럼 어수선해짐
+         // async/await 사용, 동기 코드처럼 읽히는 비동기 코드를 작성할 수 있음
+         // 가독성, 유지보수성 좋아짐, 에러 핸들링도 try/catch로 간결하게 가능
+         console.log('안녕하세요')
+
+         function asynFunc() {
+            return new Promise((resolve, reject) => {
+               setTimeout(() => {
+                  console.log('저는')
+                  resolve('하니입니다.')
+               }, 1000)
+            })
+         }
+
+         async function runAsync() {
+            const reuslt = await asynFunc()
+            console.log(reuslt)
+         }
+
+         runAsync()
+      </script>
+   </body>
+</html>

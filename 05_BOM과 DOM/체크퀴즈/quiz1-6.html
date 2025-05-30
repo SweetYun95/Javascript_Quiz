@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <!-- 1-6. 자바스크립트로 <div>태그에 아래와 같은 정보를 가진 이미지 요소를 자식 요소로 넣으세요.
+            src=’https://picsum.photos/300/300’
+            alt=’이미지’ -->
+      <h1>이미지</h1>
+      <div class="list"></div>
+
+      <script>
+         const innerHtml = document.querySelector('div')
+         innerHtml.innerHTML = '<img src="https://picsum.photos/300/300" alt="이미지">'
+      </script>
+   </body>
+</html>

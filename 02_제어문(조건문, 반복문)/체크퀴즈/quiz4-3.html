@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>4-3. 사용자로부터 단어를 입력받아 주어진 배열에 해당 단어가 있다면 배열에서 해당 단어를 출력하고 없다면 ‘찾는 단어가 사전에 없습니다.’ 라고 출력하는 코드를 완성하세요.</title>
+   </head>
+   <body>
+      <script>
+         const search = prompt('찾는 단어를 입력하세요', '')
+         const dict = ['다소니', '가람', '미르', '미리내', '그린내', '마루', '비나리']
+
+         // indexOf(요소): 요소의 인덱스 번호를 구해준다,
+         if (dict.indexOf(search) !== -1) {
+            alert(search)
+         } else {
+            alert(`찾는 단어가 사전에 없습니다.`)
+         }
+      </script>
+   </body>
+</html>

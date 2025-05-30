@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <script>
+         // 2-3. subString() 함수를 이용해 ‘이미라, 강진우, 서이현, 조상빈’ 에서 이미라만 콘솔에 출력하는 코드를 작성하세요.
+         const student = '이미라, 강진우, 서이현, 조상빈'
+         document.write(student.substring(0, 3))
+         document.write('<hr>')
+
+         /*
+                   // 역할 substring(n, m): 문자열을 잘라서 가져옴, n번 부터 (m-1)번 인덱스를 가져온다
+                  document.write(t.substring(6, 12), '<br>')
+                  document.write(t.substring(0, 5), '<br>')
+                  */
+
+         // 2-4. split() 함수를 이용해 ‘이미라, 강진우, 서이현, 조상빈’ 를 콤마로 나눈 후 아래와 같이 출력하는 코드를 작성하세요.
+         // 1번째 학생: 이미라
+         // 2번째 학생: 강진우
+         // 3번째 학생: 서이현
+         // 4번째 학생: 조상빈
+
+         const stud = student.split(',')
+         stud.forEach((name, index) => {
+            document.write(`${index + 1}번째 학생: ${name.trim()}<br>`)
+         })
+         // name은 문자열인데, "name()"로 함수처럼 호출하려 하여 오류가 발생함으로  name.trim() 로 써준다
+
+         /*
+                  var s = t.split(' ')
+                  console.log(s)
+                  console.log(s[0])
+                  console.log(s[1])
+
+                  var names = '철수/짱구/유리/맹구'
+                  console.log(names.split('/'))
+                  */
+      </script>
+   </head>
+   <body></body>
+</html>

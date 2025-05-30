@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 1-1. age가 18 미만이면 ‘age exception’ 이라는 예외를 강제 발생시킨 후 movie()함수 종료 직전 alert 으로 ‘18세 미만은 관람 불가입니다.’ 를 출력하세요.
+         function movie(age) {
+            try {
+               if (age < 18) {
+                  //예외 강제로 발생시킴
+                  throw new Error('age exception')
+               }
+            } catch (exception) {
+               alert('18세 미만은 관람 불가입니다.')
+               return
+            }
+         }
+
+         // 함수를 호출합니다.
+         movie(16)
+      </script>
+   </body>
+</html>

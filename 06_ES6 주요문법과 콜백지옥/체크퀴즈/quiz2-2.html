@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 2-2. 콜백함수란 무엇이고 왜 사용하는지 주석으로 작성하고
+         // 콜백함수는 함수의 매개변수로 호출되는 함수로 비동기 작업(setTimeout함수)후 특정 작업(함수 호출)실행하여 동기적으로 만들어줌
+
+         // 2-1예제 코드를 콜백함수로 바꾼 후 ‘안녕하세요’ -> ‘저는’ -> ‘하니입니다’ 순서대로 실행되도록 바꾸세요.
+         console.log('안녕하세요')
+
+         function name(callback) {
+            setTimeout(() => {
+               console.log('저는')
+               callback()
+            }, 1000)
+         }
+
+         name(() => console.log('하니입니다.'))
+      </script>
+   </body>
+</html>

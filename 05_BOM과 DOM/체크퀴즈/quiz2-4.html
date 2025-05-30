@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <!-- 2-4. 사용자가 버튼을 두 번 빠르게 클릭(dblclick)하면, 경고 창으로 "더블 클릭되었습니다!" 메시지를 표시하는 코드를 작성하세요. -->
+      <button id="doubleClickButton">더블 클릭하세요</button>
+
+      <script>
+         const dblclicked = document.querySelector('#doubleClickButton')
+
+         dblclicked.addEventListener('dblclick', () => {
+            alert('더블 클릭되었습니다!')
+         })
+      </script>
+   </body>
+</html>
